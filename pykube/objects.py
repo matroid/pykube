@@ -176,14 +176,14 @@ class CronJob(NamespacedAPIObject):
 
 class DaemonSet(NamespacedAPIObject):
 
-    version = "extensions/v1beta1"
+    version = "apps/v1"
     endpoint = "daemonsets"
     kind = "DaemonSet"
 
 
 class Deployment(NamespacedAPIObject, ReplicatedMixin, ScalableMixin):
 
-    version = "extensions/v1beta1"
+    version = "apps/v1"
     endpoint = "deployments"
     kind = "Deployment"
 
@@ -259,7 +259,7 @@ class ServiceAccount(NamespacedAPIObject):
 
 class Ingress(NamespacedAPIObject):
 
-    version = "extensions/v1beta1"
+    version = "networking.k8s.io"
     endpoint = "ingresses"
     kind = "Ingress"
 
@@ -386,7 +386,7 @@ class ReplicationController(NamespacedAPIObject, ReplicatedMixin, ScalableMixin)
 
 class ReplicaSet(NamespacedAPIObject, ReplicatedMixin, ScalableMixin):
 
-    version = "extensions/v1beta1"
+    version = "apps/v1"
     endpoint = "replicasets"
     kind = "ReplicaSet"
 
@@ -435,7 +435,7 @@ class PetSet(NamespacedAPIObject):
 
 class StatefulSet(NamespacedAPIObject, ReplicatedMixin, ScalableMixin):
 
-    version = "apps/v1beta1"
+    version = "apps/v1"
     endpoint = "statefulsets"
     kind = "StatefulSet"
 
@@ -470,6 +470,6 @@ class ClusterRoleBinding(APIObject):
 
 class PodSecurityPolicy(APIObject):
 
-    version = "extensions/v1beta1"
+    version = "policy/v1beta1"
     endpoint = "podsecuritypolicies"
     kind = "PodSecurityPolicy"
